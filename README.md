@@ -38,39 +38,7 @@ The goals are :
 
 ## Package `compose`
 
-This package holds functions and structs to ease docker uses.
-
-```go
-package yours
-
-import (
-    "testing"
-
-    "github.com/libkermit/docker/compose"
-)
-
-func TestItMyFriend(t *testing.T) {
-    project, err := compose.CreateProject("simple", "./assets/simple.yml")
-    if err != nil {
-        t.Fatal(err)
-    }
-    err = project.Start()
-	if err != nil {
-		t.Fatal(err)
-	}
-
-    // Do your stuff
-
-    err = project.Stop()
-	if err != nil {
-		t.Fatal(err)
-	}
-}
-```
-
-### Package `compose/testing`
-
-This package map the `compose` package but takes a `*testing.T` struct
+This package map the `compose` package but takes a `*check.C` struct
 on all methods. The idea is to write even less. Let's write the same
 example as above.
 
@@ -81,18 +49,27 @@ package yours
 import (
     "testing"
 
-    docker "github.com/libkermit/docker/compose/testing"
+	"github.com/go-check/check"
+    "github.com/libkermit/compose-check"
 )
 
-func TestItMyFriend(t *testing.T) {
-    project := compose.CreateProject(t, "simple", "./assets/simple.yml")
-    project.Start(t)
+// Hook up gocheck into the "go test" runner
+func Test(t *testing.T) { check.TestingT(t) }
+
+type CheckSuite struct{}
+
+var _ = check.Suite(&CheckSuite{})
+
+func (s *CheckSuite) TestItMyFriend(c *check.C) {
+    project := compose.CreateProject(c, "simple", "./assets/simple.yml")
+    project.Start(c)
 
     // Do your stuff
 
-    project.Stop(t)
+    project.Stop(c)
 }
 ```
+
 
 
 ## Other packages to come
