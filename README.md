@@ -1,8 +1,8 @@
 # Libkermit
-[![GoDoc](https://godoc.org/github.com/libkermit/compose?status.png)](https://godoc.org/github.com/libkermit/compose)
-[![Build Status](https://travis-ci.org/libkermit/compose.svg?branch=master)](https://travis-ci.org/libkermit/compose)
-[![Go Report Card](https://goreportcard.com/badge/github.com/libkermit/compose)](https://goreportcard.com/report/github.com/libkermit/compose)
-[![License](https://img.shields.io/github/license/libkermit/compose.svg)]()
+[![GoDoc](https://godoc.org/github.com/libkermit/compose-check?status.png)](https://godoc.org/github.com/libkermit/compose-check)
+[![Build Status](https://travis-ci.org/libkermit/compose-check.svg?branch=master)](https://travis-ci.org/libkermit/compose-check)
+[![Go Report Card](https://goreportcard.com/badge/github.com/libkermit/compose-check)](https://goreportcard.com/report/github.com/libkermit/compose-check)
+[![License](https://img.shields.io/github/license/libkermit/compose-check.svg)]()
 
 When `libkermit/compose` meet with `go-check`.
 
