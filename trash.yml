@@ -2,9 +2,9 @@ package: github.com/libkermit/compose-check
 
 import:
 - package: github.com/libkermit/docker
-  version: 9dbc412cec331080baee6ff423ddbfdefcc94f9f
+  version: 672d288ae4c8a86ed27aa64c0cbcee5177830154
 - package: github.com/libkermit/compose
-  version: 478967489ab9fe610dd5efd1504c1a837d8ffc9f
+  version: ce4b99dee2ab621df44b9e2c322dc2e030bcfbed
 - package: github.com/Azure/go-ansiterm
   version: 388960b655244e76e24c75f48631564eaefade62
 - package: github.com/cloudfoundry-incubator/candiedyaml

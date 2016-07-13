@@ -34,8 +34,7 @@ RUN ln -s /usr/local/bin/docker-${DEFAULT_DOCKER_VERSION} /usr/local/bin/docker
 WORKDIR /go/src/github.com/libkermit/compose-check
 
 COPY trash.yml .
-#RUN trash -k
-RUN trash
+RUN trash -k
 
 # Wrap all commands in the "docker-in-docker" script to allow nested containers
 ENTRYPOINT ["hack/dind"]
